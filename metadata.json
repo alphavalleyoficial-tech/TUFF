@@ -1,0 +1,5 @@
+{
+  "name": "TUFFTRAINER",
+  "description": "Aplicativo profissional de monitoramento fitness com rastreamento GPS em tempo real e histórico de progresso.",
+  "requestFramePermissions": ["geolocation", "camera", "screen-wake-lock"]
+}

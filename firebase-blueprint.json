@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Stores user-specific settings and profile information.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "The unique identifier for the user." },
+        "displayName": { "type": "string", "description": "The user's display name." },
+        "photoURL": { "type": "string", "description": "URL to the user's profile picture." },
+        "weight": { "type": "number", "description": "User's weight in kg for calorie calculation." },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the profile was created." }
+      },
+      "required": ["uid", "displayName"]
+    },
+    "Workout": {
+      "title": "Workout Session",
+      "description": "Records a single workout session.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "type": { "type": "string", "enum": ["corrida", "caminhada", "muaythai", "boxe", "jiujitsu", "funcional"] },
+        "duration": { "type": "number", "description": "Duration in seconds." },
+        "calories": { "type": "number" },
+        "distance": { "type": "number", "description": "Distance in meters." },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "type", "duration", "calories", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": "UserProfile",
+      "description": "User profile documents."
+    },
+    "/users/{uid}/workouts/{workoutId}": {
+      "schema": "Workout",
+      "description": "Subcollection of workouts for each user."
+    }
+  }
+}
