@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { AuthProvider, useAuth } from './hooks/useAuth';
 import { loginWithGoogle, logout } from './lib/firebase';
-import { Button } from './components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
-import { Avatar, AvatarFallback, AvatarImage } from './components/ui/avatar';
-import { Badge } from './components/ui/badge';
-import { Toaster } from './components/ui/sonner';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { Toaster } from '@/components/ui/sonner';
 import { toast } from 'sonner';
 import { motion, AnimatePresence } from 'motion/react';
 import { 

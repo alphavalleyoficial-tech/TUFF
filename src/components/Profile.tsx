@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { doc, updateDoc, getDocFromServer, collection, query, where, getDocs, writeBatch } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
 import { useAuth } from '../hooks/useAuth';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { toast } from 'sonner';
 import { User, Weight, ShieldCheck, Database, AlertCircle, Trash2, Eraser, Camera, Upload } from 'lucide-react';
 

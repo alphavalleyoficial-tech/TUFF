@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from '../lib/firebase';
-import { Button } from './ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Badge } from './ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { toast } from 'sonner';
 import { Play, Square, Timer, MapPin, Flame, Activity, Share2, Download, Dumbbell, TrendingUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -19,7 +19,7 @@ import {
   AlertDialogHeader, 
   AlertDialogTitle, 
   AlertDialogTrigger 
-} from './ui/alert-dialog';
+} from '@/components/ui/alert-dialog';
 import { format } from 'date-fns';
 import { 
   LineChart, 
